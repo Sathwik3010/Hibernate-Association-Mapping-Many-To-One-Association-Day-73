@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/jfs44</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Dev@2024</property>
+
+		<!-- Hibernate Properties -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		<!-- <property name="hibernate.hbm2ddl.auto">create</property>this command creates table
+		 if even it has then it delete's and creates -->
+		<property name="hibernate.hbm2ddl.auto">update</property><!-- it does insert, update, delete -->
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+		<!--
+		<mapping class="com.codegnan.entity.Governer"/>
+		<mapping class="com.codegnan.entity.Address"/>
+		-->
+		<!--
+		<mapping class="com.codegnan.bean.Governer"/>
+		<mapping class="com.codegnan.bean.State"/>
+		-->
+		
+		<mapping class="com.codegnan.model.Branch"/>
+		<mapping class="com.codegnan.model.Stud"/>
+		
+    </session-factory>
+</hibernate-configuration>
